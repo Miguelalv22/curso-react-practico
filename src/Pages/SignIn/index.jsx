@@ -49,7 +49,8 @@ function SignIn() {
         </p>
         <Link
           to="/">
-          <button className='bg-black disabled:bg-black/40 text-white w-full rounded-lg py-3 mt-4 mb-2' disabled={!hasUserAccount}>
+          <button className='bg-black disabled:bg-black/40 text-white w-full rounded-lg py-3 mt-4 mb-2'
+            onClick={() => handleSignIn()} disabled={!hasUserAccount}>
             Log in
           </button>
         </Link>
