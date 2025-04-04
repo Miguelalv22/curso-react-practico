@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import { ShoppingBagIcon } from '@heroicons/react/24/solid'
 import { ShoppingCartContext } from '../../Context'
+import ShoppingCart from '../ShoppingCart'
 
 const Navbar = () => {
   const context = useContext(ShoppingCartContext)
@@ -141,6 +141,9 @@ const Navbar = () => {
       </ul>
       <ul className='flex items-center gap-3'>
         {renderView()}
+        <li className="flex items-center">
+          <ShoppingCart />
+        </li>
       </ul>
     </nav>
   )
